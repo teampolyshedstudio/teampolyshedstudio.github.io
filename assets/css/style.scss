@@ -1,0 +1,121 @@
+---
+---
+
+// Polices reprises de la page itch de Kelc'h : Cinzel (titres), Alegreya Sans (texte)
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+// Palette commune avec la page itch de Kelc'h
+$kelch-bg:     #0B0A09;  // fond
+$kelch-panel:  #1A1714;  // fond des boutons
+$kelch-text:   #F1EFE0;  // texte crème
+$kelch-gold:   #CFB383;  // liens, cadres
+$kelch-muted:  #A9A493;  // texte secondaire
+$kelch-glow:   rgba(36, 54, 51, 0.55); // halo vert-bleu de la gemme (écran de démarrage)
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { background: $kelch-bg; }
+
+body {
+  margin: 0;
+  background: transparent; // le fond est porté par html et body::before
+  color: $kelch-text;
+  font-family: 'Alegreya Sans', 'Fira Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Fond : capture du camp, floutée, sous un voile sombre.
+// Calque fixe en pseudo-élément (background-attachment: fixed est mal géré sur mobile).
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 18%, $kelch-glow, transparent 70%),
+    radial-gradient(ellipse 75% 85% at 50% 45%, rgba($kelch-bg, 0.45), rgba($kelch-bg, 0.9) 100%),
+    url("{{ '/assets/background.jpg' | relative_url }}") center / cover no-repeat,
+    $kelch-bg;
+}
+
+.markdown-body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  text-align: center;
+
+  img { max-width: 100%; }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-variant: small-caps;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin: 0.1em 0 0.6em;
+  }
+
+  // Ligne dorée sous le titre, comme les cadres ornés de l'interface
+  h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, transparent, $kelch-gold, transparent);
+  }
+
+  p { margin: 0 0 1.2em; }
+  i { color: $kelch-muted; }
+  b, strong { color: $kelch-gold; font-weight: 600; }
+
+  a { color: $kelch-gold; text-decoration: none; }
+  a:hover { color: lighten($kelch-gold, 12%); }
+
+  // Boutons : largeur identique, icône + libellé centrés
+  .links {
+    margin: 28px auto;
+
+    br { display: none; }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 380px;
+      max-width: 100%;
+      margin: 10px auto;
+      padding: 11px 16px;
+      background: rgba($kelch-panel, 0.92);
+      border: 1px solid rgba($kelch-gold, 0.55);
+      border-radius: 4px;
+      color: $kelch-text;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease, color 0.15s ease;
+    }
+
+    a:hover {
+      color: $kelch-gold;
+      border-color: $kelch-gold;
+      box-shadow: 0 0 14px rgba($kelch-gold, 0.35);
+      transform: translateY(-1px);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      flex: none;
+    }
+  }
+}
+
+// Petits écrans : libellés un peu plus petits
+@media (max-width: 400px) {
+  .markdown-body .links a { font-size: 16px; }
+}
