@@ -5,8 +5,8 @@
 <h1 align="center">Polyshed Studio</h1>
 
 <p align="center">
-  Small indie studio making <b>Kelc'h</b>, a fast-paced solo/co-op action roguelite set in a medieval fantasy world inspired by Celtic mythology, with offbeat humor.<br>
-  <i>Petit studio indé, nous développons <b>Kelc'h</b>, un roguelite d'action nerveux en solo/coop, dans un monde médiéval fantastique inspiré de la mythologie celtique, avec un humour décalé.</i>
+  Small indie studio making <b>Kelc'h</b>, a fast-paced solo/co-op action roguelite set in a medieval fantasy world inspired by Celtic folklore, with offbeat humor.<br>
+  <i>Petit studio indé, nous développons <b>Kelc'h</b>, un roguelite d'action nerveux en solo/coop, dans un monde médiéval fantastique inspiré de la folklore celtique, avec un humour décalé.</i>
 </p>
 
 <p align="center" class="links">
