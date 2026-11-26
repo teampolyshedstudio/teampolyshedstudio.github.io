@@ -11,7 +11,7 @@
 
 <p align="center" class="links">
   <a href="https://discord.gg/watPmQh7nx"><img src="https://cdn.simpleicons.org/discord/CFB383" alt="" width="20" height="20"> Discord</a><br>
-  <a href="https://polyshedstudio.itch.io/kelch"><img src="https://cdn.simpleicons.org/itchdotio/CFB383" alt="" width="20" height="20"> Itch.io - Kelc'h</a><br>
+  <a href="https://polyshedstudio.itch.io/kelch"><img src="https://cdn.simpleicons.org/itchdotio/CFB383" alt="" width="20" height="20"> Itch.io - Kelc'h (release 17/12)</a><br>
   <a href="https://www.youtube.com/@PolyshedStudio"><img src="https://cdn.simpleicons.org/youtube/CFB383" alt="" width="20" height="20"> YouTube</a><br>
   <a href="https://www.twitch.tv/polyshedstudio"><img src="https://cdn.simpleicons.org/twitch/CFB383" alt="" width="20" height="20"> Twitch</a><br>
   <a href="mailto:team.polyshedstudio@gmail.com"><img src="assets/icons/mail.svg" alt="" width="20" height="20"> team.polyshedstudio@gmail.com</a>
